@@ -43,8 +43,8 @@ int subtitle_clean_msg(SDL_Surface *screen, int x, int y, const char *msg)
 
                { 
                  char log_msg[256];
-                 sprintf(log_msg, "CleanedMsg:%s", msg);
-                 __android_log_print(ANDROID_LOG_INFO, "BroovPlayer", log_msg);
+                 // sprintf(log_msg, "CleanedMsg:%s", msg);
+                 __android_log_print(ANDROID_LOG_INFO, "BroovPlayer", "CleanedMsg:%s", msg);
                }
            }
 

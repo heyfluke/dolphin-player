@@ -1966,7 +1966,7 @@ char** sub_filenames(char* path, char *fname_lwr)
 					if (prio) {
 						prio += prio;
 						sprintf(tmpresult, "%s%s", j == 0 ? f_dir : path, de->d_name);
-						__android_log_print(ANDROID_LOG_INFO, "BroovPlayer", tmpresult);
+						__android_log_print(ANDROID_LOG_INFO, "BroovPlayer", "%s", tmpresult);
 						//          fprintf(stderr, "%s priority %d\n", tmpresult, prio);
 						if ((f = fopen(tmpresult, "rt"))) {
 							fclose(f);
@@ -2343,8 +2343,8 @@ int subInit(char* pcszFileName, float fps)
 
 		{
 			char log_msg[256];
-			sprintf(log_msg, "SubtitleFile:%s, FPS:%f", name, fps);
-			__android_log_print(ANDROID_LOG_INFO, "BroovPlayer", log_msg);
+			// sprintf(log_msg, "SubtitleFile:%s, FPS:%f", name, fps);
+			__android_log_print(ANDROID_LOG_INFO, "BroovPlayer", "SubtitleFile:%s, FPS:%f", name, fps);
 		}
 
 #ifndef BROOV_NO_UNICODE_SUPPORT

@@ -911,8 +911,8 @@ static void calculate_frames_per_second()
 #endif
 				{
 					char log_msg[16];
-					sprintf(log_msg, "%2.1f FPS", player_fps);
-					__android_log_print(ANDROID_LOG_INFO, "AV FPS", log_msg);
+					// sprintf(log_msg, "%2.1f FPS", player_fps);
+					__android_log_print(ANDROID_LOG_INFO, "AV FPS", "%2.1f FPS", player_fps);
 					//fps_draw_msg(screen, fps_display_x, sy, log_msg);
 				}
 
